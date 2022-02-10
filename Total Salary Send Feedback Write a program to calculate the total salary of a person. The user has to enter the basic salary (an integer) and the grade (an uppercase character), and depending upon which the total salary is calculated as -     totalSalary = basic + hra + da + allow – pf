@@ -1,0 +1,36 @@
+
+Write a program to calculate the total salary of a person. The user has to enter the basic salary (an integer) and the grade (an uppercase character), and depending upon which the total salary is calculated as -
+    totalSalary = basic + hra + da + allow – pf
+
+import java.util.*;
+public class Main
+{
+   public static void main (String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int sal = sc.nextInt();
+       char c = sc.next().charAt(0);
+       int allow;
+      
+     
+       
+       if (c==65){
+            allow = 1700;
+           
+       }
+       else if(c==66){
+            allow = 1500;
+         
+       }else{
+            allow = 1300;
+         
+       }
+       double totalSalary=((sal+(0.20*sal)+(0.50*sal)+allow)-(0.11*sal));
+       double p=Math.round(totalSalary);
+       int h=(int)(p);
+       System.out.println(h);
+
+    }
+    
+}
+
+   
