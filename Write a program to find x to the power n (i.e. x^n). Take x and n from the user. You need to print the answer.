@@ -1,0 +1,41 @@
+
+Write a program to find x to the power n (i.e. x^n). Take x and n from the user. You need to print the answer.
+
+import java.util.*;
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+        Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       int x = sc.nextInt();
+       int p =1;
+       int i = 1;
+       while(i<=x){
+           p = p*n;
+           i++;
+       }
+          System.out.println(p);
+        
+    }
+}
+
+Method 2 - usiing for loop
+
+import java.util.*;
+public class Main
+{
+   public static void main (String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       int x = sc.nextInt();
+       int p =1;
+       
+      for(int i=1;i<=x;i++)
+          {
+              p=p*n;
+          }
+          System.out.println(p);
+        }    
+    
+}
