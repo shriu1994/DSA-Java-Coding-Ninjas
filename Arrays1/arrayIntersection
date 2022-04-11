@@ -1,0 +1,40 @@
+You have been given two integer arrays/list(ARR1 and ARR2) of size N and M, respectively. You need to print their intersection; An intersection for this problem can be defined when both the arrays/lists contain a particular value or to put it in other words, when there is a common value that exists in both the arrays/lists.
+
+package Lec7operators_loops;
+
+import java.util.Scanner;
+
+public class arrayIntersection {
+	public static void intersections(int arr1[], int arr2[]) {
+        //Your code goes here
+
+        int n1=arr1.length;
+        int n2=arr2.length;
+
+
+
+        for(int i = 0;i<n1;i++)
+        {
+            for(int j=0;j<n2;j++)
+            {
+                if(arr1[i]==arr2[j])
+                {
+                    System.out.print(arr1[i]+" ");
+                    arr2[j]=Integer.MAX_VALUE;
+                    break;
+                }
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int arr1[] = {2,6,1,2};
+        int arr2[] = {1,2,3,4,2};
+        intersections(arr1,arr2); // output 2 1 2
+    }
+
+
+}
+
